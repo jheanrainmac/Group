@@ -1,69 +1,51 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+    
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>NotizBlock</title>
-        <link href="styles.css" rel="stylesheet" type="text/css" />
-        <link rel="icon" href="images/icon.ico" />
-    </head>
-<!-- ToDod:  need to change the names of the div ids to correspond to the actual panels. -->
-<!-- ToDod:  need to tidy the css -->
+        <?php include 'htmlhead.php'; ?>
+        <script type="text/javascript" src="jquery.js"></script>
+    </head>    
 
 <body>
+	
         <div id="topContentWrap">
-                <div id="header"> 
-                    <div><h1 style="text-align: center">NOTIZ BLOCK</h1> 
-                        <a id="loginposition" href="" style="text-align:right"> Login  </a>
-                    </div>
-                <br/>
-                <img src="images/account_line.gif" alt=""/> 
-                </div>
-                
-
-            <div id="logoPanel"></div>
-            <div id="topContent">
-                <div id="aboutPanel">
-                    <div id="home"><a href="#">Housing</a></div>
-                    <h2>Living Spaces</h2>
-                    <h3>Off- campus housing in and around Mona!</h3>
-                    <div class="read"><a href="#">see more</a></div>
-                </div>
-                <div id="eventPanel">
-                    <div id="about"><a href="#">Books</a></div>
-                    <h2>Books</h2>
-                    <h3>New & used text books for Computer Science and Physics students</h3>
-                    <div class="read"><a href="#">see more</a></div>
-                </div>
-                <div id="rightPanel">
-                    <div id="menu">
-                    </div>
-                    <div id="iconLinks">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="middleWrap">
-            <div id="middlePanel">
-            </div>
-            <div id="footWrap">
-                <div id="footPanel">
-                    <div id="footNav">
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><div class="blank">|</div></li>
-                            <li><a href="#">About Us</a></li>
-                            <li><div class="blank">|</div></li>
-                            <li><a href="#">Living Spaces</a></li>
-                            <li><div class="blank">|</div></li>
-                            <li><a href="#">Books</a></li>
-                            <li><div class="blank">|</div></li>
-                            <li><a href="#">Vendors</a></li>
-                        </ul>
-                    </div>
-                    <div id="copyright">© Copyright Information Goes Here. All Rights Reserved. Notiz Block</div>
+             <?php include 'header.php'; ?>
+             
+     
+			<div id="navigation">  
+				<img src="images/aboutus.png" alt="header" />
+			</div>
+             
+			<div class="central">
+                <div id="livingSpacesPanel">
+					<h2>Living Spaces</h2>
+					<h3>Off- campus housing conveniently located in and around Mona!</h3>
                     
+					<div class="read">
+						<a href="listhouses.php">see more</a>
+					</div>
+			    </div>
+                    
+                   
+				<div id="bookPanel">
+					<h2>Books</h2>
+                  
+                    <h3>New & used text books for Computer Science and Physics students</h3>
+                    <div class="read"><a href="viewbook.php">see more</a></div>
                 </div>
+                </div>
+            
+            <?php include 'Api.php'; ?>
+            
+            <center>            
+                <?php include 'recommender.php'; ?>
+            </center>
+            
             </div>
+    
+    
+            <?php include 'footer.php'; ?>
+            
         </div>
     </body>
 </html>
